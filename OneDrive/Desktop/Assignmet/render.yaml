@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: round-2-auth-website
+    env: node
+    plan: free
+    buildCommand: ""
+    startCommand: "npm start"
+    envVars:
+      - key: NODE_VERSION
+        value: 22.15.1
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: DATABASE_PATH
+        value: ./data/app.sqlite
