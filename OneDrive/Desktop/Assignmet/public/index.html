@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Secure Notes</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="brand-panel" aria-label="Secure Notes overview">
+        <h1>Secure Notes</h1>
+        <p>Secure notes with real signup, login, backend routes, and SQLite persistence.</p>
+        <div class="status-grid">
+          <div>
+            <span>Backend</span>
+            <strong>Node.js API</strong>
+          </div>
+          <div>
+            <span>Database</span>
+            <strong>SQLite</strong>
+          </div>
+          <div>
+            <span>Auth</span>
+            <strong>Hashed passwords</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="app-panel" aria-label="Authentication and dashboard">
+        <div id="auth-view">
+          <div class="tabs" role="tablist" aria-label="Authentication tabs">
+            <button class="tab active" data-auth-tab="login" type="button">Login</button>
+            <button class="tab" data-auth-tab="signup" type="button">Signup</button>
+          </div>
+
+          <form id="login-form" class="auth-form">
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" required>
+            </label>
+            <label>
+              Password
+              <input name="password" type="password" autocomplete="current-password" required>
+            </label>
+            <button type="submit">Login</button>
+          </form>
+
+          <form id="signup-form" class="auth-form hidden">
+            <label>
+              Name
+              <input name="name" type="text" autocomplete="name" minlength="2" required>
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" required>
+            </label>
+            <label>
+              Password
+              <input name="password" type="password" autocomplete="new-password" minlength="8" required>
+            </label>
+            <button type="submit">Create account</button>
+          </form>
+          <p id="auth-message" class="message" role="status"></p>
+        </div>
+
+        <div id="dashboard-view" class="hidden">
+          <header class="dashboard-header">
+            <div>
+              <span class="eyebrow">Signed in</span>
+              <h2 id="welcome-title">Dashboard</h2>
+            </div>
+            <button id="logout-button" class="secondary" type="button">Logout</button>
+          </header>
+
+          <form id="note-form" class="note-form">
+            <input name="title" type="text" maxlength="120" placeholder="Note title" required>
+            <textarea name="body" maxlength="2000" placeholder="Write a private note..." required></textarea>
+            <button type="submit">Save note</button>
+          </form>
+
+          <div class="notes-header">
+            <h3>Your notes</h3>
+            <span id="note-count">0 stored</span>
+          </div>
+          <div id="notes-list" class="notes-list"></div>
+          <p id="dashboard-message" class="message" role="status"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
