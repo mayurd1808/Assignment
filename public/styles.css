@@ -83,21 +83,10 @@ button.secondary {
     url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80") center/cover;
 }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 58px;
-  height: 58px;
-  margin-bottom: 2rem;
-  border: 2px solid rgba(255, 255, 255, 0.72);
-  border-radius: 8px;
-  font-weight: 900;
-}
-
 .brand-panel h1 {
   margin: 0;
-  font-size: clamp(2.8rem, 7vw, 5.5rem);
-  line-height: 0.95;
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  line-height: 1;
 }
 
 .brand-panel p {
@@ -106,42 +95,6 @@ button.secondary {
   color: rgba(255, 255, 255, 0.86);
   font-size: 1.1rem;
   line-height: 1.65;
-}
-
-.status-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-}
-
-.status-grid div {
-  min-width: 0;
-  padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.status-grid span,
-.eyebrow {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
-.status-grid span {
-  color: rgba(255, 255, 255, 0.68);
-}
-
-.status-grid strong {
-  display: block;
-  color: #fff;
-  font-size: 0.95rem;
-  overflow-wrap: anywhere;
 }
 
 .app-panel {
@@ -312,9 +265,5 @@ textarea {
   .brand-panel {
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
-
-  .status-grid {
-    grid-template-columns: 1fr;
   }
 }
