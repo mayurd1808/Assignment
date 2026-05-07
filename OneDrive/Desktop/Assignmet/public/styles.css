@@ -97,42 +97,6 @@ button.secondary {
   line-height: 1.65;
 }
 
-.status-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-}
-
-.status-grid div {
-  min-width: 0;
-  padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.status-grid span,
-.eyebrow {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
-.status-grid span {
-  color: rgba(255, 255, 255, 0.68);
-}
-
-.status-grid strong {
-  display: block;
-  color: #fff;
-  font-size: 0.95rem;
-  overflow-wrap: anywhere;
-}
-
 .app-panel {
   min-height: 640px;
   padding: clamp(1.25rem, 3vw, 2rem);
@@ -301,9 +265,5 @@ textarea {
   .brand-panel {
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
-
-  .status-grid {
-    grid-template-columns: 1fr;
   }
 }
