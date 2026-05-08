@@ -20,7 +20,7 @@
             <button class="tab" data-auth-tab="signup" type="button">Signup</button>
           </div>
 
-          <form id="login-form" class="auth-form">
+          <form id="login-form" class="auth-form" novalidate>
             <label>
               Email
               <input name="email" type="email" autocomplete="email" required>
@@ -32,7 +32,7 @@
             <button type="submit">Login</button>
           </form>
 
-          <form id="signup-form" class="auth-form hidden">
+          <form id="signup-form" class="auth-form hidden" novalidate>
             <label>
               Name
               <input name="name" type="text" autocomplete="name" minlength="2" required>
@@ -59,7 +59,7 @@
             <button id="logout-button" class="secondary" type="button">Logout</button>
           </header>
 
-          <form id="note-form" class="note-form">
+          <form id="note-form" class="note-form" novalidate>
             <input name="title" type="text" maxlength="120" placeholder="Note title" required>
             <textarea name="body" maxlength="2000" placeholder="Write a private note..." required></textarea>
             <button type="submit">Save note</button>
